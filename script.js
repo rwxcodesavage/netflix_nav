@@ -1,3 +1,11 @@
-const title = document.getElementsByTagName('h1');
+const openBtn = document.querySelector('.open-btn');
+const closeBtn = document.querySelector('.close-btn');
+const nav = document.querySelectorAll('.nav');
 
-console.log(title);
+openBtn.addEventListener('click', () => {
+    nav.forEach(navEl => navEl.classList.add('visible'));
+});
+
+closeBtn.addEventListener('click', () => {
+    nav.forEach(navEl => navEl.classList.remove('visible'));
+});
